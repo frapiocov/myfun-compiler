@@ -1,0 +1,22 @@
+# gli n numeri della successione di fibonacci
+main
+	integer first := 0, second := 1, n, sum := 0;
+	integer i :=0;
+
+	?, "Inserire la taglia: ";
+	% n;
+	?, "Serie di Fibonacci: ";
+
+	while i < n loop
+	    if i <= 1 then
+	        sum := i;
+	    else
+	       sum := first + second;
+	       first := second;
+	       second := sum;
+	    end if;
+	    ?: sum;
+	    i := i + 1;
+	end loop;
+
+end main;

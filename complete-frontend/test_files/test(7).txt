@@ -1,0 +1,22 @@
+fun ritornoIntero(integer i): integer
+    return i * 4;
+end fun;
+
+fun ritornoReale(real r) : real
+    return r * 2;
+end fun;
+
+fun ritornoBool(bool b) : bool
+    return not b;
+end fun;
+
+fun ritornoStringa(string s) : string
+    return s & "Aggiunta";
+end fun;
+
+main
+    integer intero := ritornoStringa("Stringa");
+    real reale := ritornoReale(1.8);
+    bool boolean := ritornoBool(true);
+    string stringa := ritornoStringa("Stringa");
+end main;

@@ -1,0 +1,70 @@
+#*
+Programma MyFun in cui
+1- Si visualizza un menu in cui l'utente può scegliere l' operazione aritmetica da svolgere.
+2- Si richiedono all'utente gli input (interi o double) necessari per svolgere l'operazione scelta.
+3- viene eseguita l'operazione, restituito il risultato e chiesto se si vuole continuare.
+4- All'input 'no' oppure 'si' il programma conclude oppure mostra il menu iniziale, rispettivamente.
+#
+
+fun somma(integer a, integer b):integer
+    return  a + b;
+end fun;
+
+fun prodotto(integer a, integer b):integer
+    return a * b;
+end fun;
+
+fun sottrazione(integer a, integer b):integer
+    return a - b;
+end fun;
+
+fun divisione(integer a, integer b):integer
+    integer result := 0;
+    if b <> 0 then
+        result := a / b;
+    end if;
+    return result;
+end fun;
+
+fun scegli_operazione(integer op, integer a, integer b):integer
+
+    if op = 1 then
+    	return somma(a, b);
+    end if;
+
+    if op = 2 then
+        return prodotto(a, b);
+    end if;
+
+    if op = 3 then
+        return sottrazione(a, b);
+    end if;
+
+    if op = 4 then
+        return divisione(a, b);
+    end if;
+
+end fun;
+
+# somma codice 1
+# prodotto codice 2
+# sottrazione codice 3
+# divisione codice 4
+
+main
+    integer a, b, ris, op;
+    string risposta := "si";
+
+    while risposta = "si" loop
+        ?: "Scegli l'operazione aritmetica: 1 somma, 2 prodotto, 3 sottrazione, 4 divisione";
+        % op "operazione: ";
+        % a "inserisci primo intero: ";
+        % b "inserisci secondo intero: ";
+
+        ris := scegli_operazione(op, a, b);
+        ?: "Risultato:" & ris;
+
+        % risposta 'vuoi continuare? (si/no):\t';
+    end loop;
+
+end main;

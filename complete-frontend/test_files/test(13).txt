@@ -1,0 +1,21 @@
+
+
+fun ritornoReale(real r) : real
+    return r * 2;
+end fun;
+
+fun ritornoBool(bool b) : bool
+    return not b;
+end fun;
+
+fun ritornoStringa(string s) : string
+    return s & "Aggiunta";
+end fun;
+
+main
+    integer reale;
+
+    bool boolean := ritornoBool(true);
+    string stringa := ritornoStringa("Stringa");
+    reale := b;
+end main;

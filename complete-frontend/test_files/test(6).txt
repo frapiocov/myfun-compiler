@@ -1,0 +1,48 @@
+
+fun fString(out string size)
+    size := "OK";
+end fun;
+
+fun fInteger(out integer size)
+    size := 1;
+end fun;
+
+fun fReale(out real size)
+    size := 2.2;
+end fun;
+
+fun fBoolean(out bool size)
+    size := true;
+end fun;
+
+main
+string c := "NOT OK";
+integer i := 0;
+real reale := 1.1;
+bool b := false;
+
+? "Stringa prima funzione ";
+?. c;
+fString(@c);
+? "Stringa dopo funzione ";
+?. c;
+
+? "Integer prima funzione ";
+?. i;
+fInteger(@i);
+? "Integer dopo funzione ";
+?. i;
+
+? "Real prima funzione ";
+?. reale;
+fReale(@reale);
+? "Real dopo funzione ";
+?. reale;
+
+? "Bool prima funzione ";
+?. b;
+fBoolean(@b);
+? "Bool dopo funzione ";
+?. b;
+
+end main;

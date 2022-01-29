@@ -1,0 +1,118 @@
+#*
+
+Programma MyFun in cui
+1- Si visualizza un menu in cui l'utente può scegliere l' operazione aritmetica da svolgere.
+2- Si richiedono all'utente gli input (interi o double) necessari per svolgere l'operazione scelta.
+3- viene eseguita l'operazione, restituito il risultato e chiesto se si vuole continuare.
+4- All'input 'no' oppure 'si' il programma conclude oppure mostra il menu iniziale, rispettivamente.
+
+Operazioni:
+1. la somma di due numeri
+2. la moltiplicazione di due numeri utilizzando la somma
+3. la divisione intera fra due numeri positivi
+4. l’elevamento a potenza
+5. la successione di Fibonacci
+
+#
+fun prodotto(integer a, integer b):integer
+    integer p := 0, i := 0;
+    while i < b loop
+        p := p + a;
+        i := i + 1;
+    end loop;
+    return p;
+end fun;
+
+
+fun somma(integer a, integer b):integer
+    return a + b;
+end fun;
+
+fun potenza(integer a, integer b):integer
+    integer res := a^b;
+    return res;
+end fun;
+
+fun divisione(integer a, integer b):integer
+    integer result := 0;
+    if b <> 0 then
+        result := a / b;
+    end if;
+    return result;
+end fun;
+
+fun fibonacci(integer n)
+
+   	integer first := 0, second := 1, sum := 0;
+   	integer i := 0;
+
+   	?, "Serie di Fibonacci: ";
+
+   	while i < n loop
+   	    if i <= 1 then
+   	        sum := i;
+   	    else
+   	       sum := first + second;
+   	       first := second;
+   	       second := sum;
+   	    end if;
+   	    ?: sum;
+   	    i := i + 1;
+   	end loop;
+
+end fun;
+
+fun scegli_operazione(integer op, integer a, integer b):integer
+
+    integer result := 0;
+
+    if op = 1 then
+    	result := somma(a, b);
+    end if;
+
+    if op = 2 then
+        result := prodotto(a, b);
+    end if;
+
+    if op = 3 then
+        result := divisione(a, b);
+    end if;
+
+    if op = 4 then
+        result := potenza(a, b);
+    end if;
+
+    if op = 5 then
+        fibonacci(a);
+    end if;
+
+    return result;
+
+end fun;
+
+main
+    integer a, b, ris, op;
+    string risposta := "si";
+
+    while risposta = "si" loop
+        ?: "Scegli l'operazione aritmetica: 1.somma 2.moltiplicazione 3.divisione 4.elevamento a potenza 5.successione di Fibonacci";
+        % op "operazione: ";
+
+        if op = 5 then
+            % a "inserisci intero: ";
+        else
+            % a "inserisci primo intero: ";
+            % b "inserisci secondo intero: ";
+        end if;
+
+        ris := scegli_operazione(op, a, b);
+
+        if op != 5 then
+            ? "Risultato: ";
+            ?: ris;
+        end if;
+
+        % risposta 'vuoi continuare? (si/no):\t';
+    end loop;
+
+end main;

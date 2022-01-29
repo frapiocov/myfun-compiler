@@ -1,0 +1,15 @@
+fun addInteri(integer a, integer b): integer
+    return a+b;
+end fun;
+
+fun addMisti(integer a, real b): real
+    return a+b;
+end fun;
+
+main
+    integer intero1 := 1,   intero2 := 2;
+    real    reale1 := 1.1,  reale2 := 2.2;
+    integer resultIntero := addInteri(intero1, intero2);
+    real resultReal := addMisti(intero1, reale1);
+    resultReal := 1.1 + addInteri(1,2);
+end main;

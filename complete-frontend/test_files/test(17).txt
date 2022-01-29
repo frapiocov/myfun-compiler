@@ -1,0 +1,6 @@
+fun voidFun()
+end fun;
+
+main
+    ? voidFun();
+end main;

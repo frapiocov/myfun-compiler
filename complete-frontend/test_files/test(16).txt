@@ -1,0 +1,4 @@
+main
+    integer intero := 1;
+    pippo := 1.8;
+end main;

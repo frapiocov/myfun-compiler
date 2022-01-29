@@ -1,0 +1,7 @@
+fun funEsempio(out integer a): integer
+    return a;
+end fun;
+
+main
+    integer intero1 := funEsempio(1);
+end main;

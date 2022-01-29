@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Program>
+  <BodyOp>
+    <VarDeclOp>
+      <PrimitiveType type="integer"/>
+      <IdInitOp>
+        <Id lessema="i"/>
+        <IntegerConst value="0"/>
+      </IdInitOp>
+    </VarDeclOp>
+    <VarDeclOp>
+      <PrimitiveType type="integer"/>
+      <IdInitOp>
+        <Id lessema="first"/>
+        <IntegerConst value="0"/>
+      </IdInitOp>
+      <IdInitOp>
+        <Id lessema="second"/>
+        <IntegerConst value="1"/>
+      </IdInitOp>
+      <IdInitOp>
+        <Id lessema="n"/>
+      </IdInitOp>
+      <IdInitOp>
+        <Id lessema="sum"/>
+        <IntegerConst value="0"/>
+      </IdInitOp>
+    </VarDeclOp>
+    <WhileOp>
+      <LTOp>
+        <Id lessema="i"/>
+        <Id lessema="n"/>
+      </LTOp>
+      <BodyOp>
+        <AssignOp>
+          <Id lessema="i"/>
+          <AddOp>
+            <Id lessema="i"/>
+            <IntegerConst value="1"/>
+          </AddOp>
+        </AssignOp>
+        <WriteOp>
+          <Id lessema="sum"/>
+        </WriteOp>
+        <IfstatOp>
+          <LEOp>
+            <Id lessema="i"/>
+            <IntegerConst value="1"/>
+          </LEOp>
+          <BodyOp>
+            <AssignOp>
+              <Id lessema="sum"/>
+              <Id lessema="i"/>
+            </AssignOp>
+          </BodyOp>
+          <ElseOp>
+            <BodyOp>
+              <AssignOp>
+                <Id lessema="second"/>
+                <Id lessema="sum"/>
+              </AssignOp>
+              <AssignOp>
+                <Id lessema="first"/>
+                <Id lessema="second"/>
+              </AssignOp>
+              <AssignOp>
+                <Id lessema="sum"/>
+                <AddOp>
+                  <Id lessema="first"/>
+                  <Id lessema="second"/>
+                </AddOp>
+              </AssignOp>
+            </BodyOp>
+          </ElseOp>
+        </IfstatOp>
+      </BodyOp>
+    </WhileOp>
+    <WriteOp>
+      <StringConst value="Serie di Fibonacci: "/>
+    </WriteOp>
+    <ReadOp>
+      <Id lessema="n"/>
+    </ReadOp>
+    <WriteOp>
+      <StringConst value="Inserire la taglia: "/>
+    </WriteOp>
+  </BodyOp>
+</Program>

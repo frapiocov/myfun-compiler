@@ -1,0 +1,6 @@
+main
+    ?,  "Write con spazio finale";
+    ?   "Write normale";
+    ?.  "Write con newLine finale";
+    ?:  "Write con tab finale";
+end main;

@@ -1,0 +1,10 @@
+i <-- 1
+y <-- 0
+while i <> 10 loop
+    if y then
+        i <-- y
+       else
+        i <-- 1
+    end if
+end loop
+z <-- y > 10

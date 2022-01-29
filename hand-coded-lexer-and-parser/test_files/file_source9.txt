@@ -1,0 +1,5 @@
+if num <-- 2 then
+    num < 3
+else
+    num > 5
+end if

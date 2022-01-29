@@ -1,0 +1,4 @@
+x <-- y;
+y <-- z;
+if x then y <--1 else y <--3 end if;
+z <-- t

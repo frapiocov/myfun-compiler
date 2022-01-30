@@ -266,7 +266,7 @@ Program ::= VarDeclList FunList Main:;
         ;
 ```
 ### Inference rules
-They can be found in the inference_rules.pdf file in the repository [here](complete-frontend\inference_rules.pdf).
+They can be found in the inference_rules.pdf file in the repository.
 
 ### C code generation: from front-end to back-end
 Using the Visitor pattern, the C code equivalent to the MyFun code is generated. In order to adapt at best and to favor the correctness of the
